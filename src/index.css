@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 140 25% 12%;
+    --card-foreground: 60 30% 96%;
+
+    --popover: 140 30% 10%;
+    --popover-foreground: 60 30% 96%;
+
+    --primary: 140 60% 45%;
+    --primary-foreground: 140 30% 8%;
+
+    --secondary: 40 45% 55%;
+    --secondary-foreground: 140 30% 8%;
+
+    --muted: 140 20% 20%;
+    --muted-foreground: 60 15% 70%;
+
+    --accent: 160 50% 40%;
+    --accent-foreground: 60 30% 96%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 60 30% 96%;
+
+    --border: 140 20% 25%;
+    --input: 140 20% 25%;
+    --ring: 140 60% 45%;
+
+    --radius: 0.75rem;
+
+    /* Nature-inspired custom colors */
+    --forest-deep: 140 40% 15%;
+    --forest-light: 140 35% 35%;
+    --earth-brown: 30 30% 25%;
+    --mist: 180 10% 85%;
+    --glow: 140 80% 60%;
+    --warm-light: 45 100% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
